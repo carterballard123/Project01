@@ -4,9 +4,9 @@ int main(){
 
 int i;
 int ans1, ans2, ans3, ans4, ans5;
-int p1, p2, p3, p4, p5, p6, p7, p8, p9, p10;
-int p01, p02, p03, p04, p05, p06, p07, p08, p09, p010;
+int p1, p2, p3, p4, p5 = 0;
 int total1, total2, total3;
+int finalScore;
 
 printf("    Welcome to The Game!\n\n");
 
@@ -34,7 +34,7 @@ printf("3) Wais\n");
 printf("4) Altavista\n");
 
 printf("Enter your answer: ");
-scanf("%d", ans1);
+scanf("%d", &ans1);
 
 // Right + wrong answer - points rewarded for Q1
 if(ans1 == 2){
@@ -44,9 +44,12 @@ if(ans1 == 2){
 }
 else{
     printf("That is the WRONG ANSWER!\n");
-    p01 = 0;
-    printf("You have scored %d points!\n", p01);
+    p1 = 0;
+    printf("You have scored %d points!\n", p1);
 }
+
+finalScore = p1;
+printf("Your total points are: %d\n", finalScore);
 
 //Q2
 printf("Q2) Which web browser was first invented in 1990?\n\n");
@@ -56,7 +59,7 @@ printf("3) Mozilla\n");
 printf("4) Nexus\n");
 
 printf("Enter your answer: ");
-scanf("%d", ans2);
+scanf("%d", &ans2);
 
 //Right + wrong answer - points rewarded for Q2
 if(ans2 == 4){
@@ -66,9 +69,12 @@ if(ans2 == 4){
 }
 else{
     printf("That is the WRONG ANSWER!\n");
-    p02 = 0;
-    printf("You have scored %d points!\n", p02);
+    p2 = 0;
+    printf("You have scored %d points!\n", p2);
 }
+
+finalScore += p2;
+printf("Your total points are: %d\n", finalScore);
 
 //Q3
 printf("Q3) What was the first computer virus known as?\n\n");
@@ -78,7 +84,7 @@ printf("3) Elk Cloner\n");
 printf("4) SCA Virus\n");
 
 printf("Enter your answer: ");
-scanf("%d", ans3);
+scanf("%d", &ans3);
 
 //Right + wrong answer - points rewarded for Q3
 if(ans3 == 2){
@@ -88,9 +94,13 @@ if(ans3 == 2){
 }
 else{
     printf("That is the WRONG ANSWER!\n");
-    p03 = 0;
-    printf("You have scored %d points!\n", p03);
+    p3 = 0;
+    printf("You have scored %d points!\n", p3);
 }
+
+finalScore += p3;
+printf("Your total points are: %d\n", finalScore);
+
 //Q4
 printf("Q4) What is the Firewall in a computer used for?\n\n");
 printf("1) Security\n");
@@ -99,7 +109,7 @@ printf("3) Monitoring\n");
 printf("4) Authentication\n");
 
 printf("Enter your answer: ");
-scanf("%d", ans4);
+scanf("%d", &ans4);
 
 //Right + wrong answer - points rewarded for Q4
 if(ans4 == 1){
@@ -109,9 +119,12 @@ if(ans4 == 1){
 }
 else{
     printf("That is the WRONG ANSWER!\n");
-    p04 = 0;
-    printf("You have scored %d points!\n", p04);
+    p4 = 0;
+    printf("You have scored %d points!\n", p4);
 }
+
+finalScore += p4;
+printf("Your total points are: %d\n", finalScore);
 
 //Q5
 printf("Q5) Which of the following is NOT a database management software?\n\n");
@@ -121,21 +134,68 @@ printf("3) Sybase\n");
 printf("4) Cobal\n");
 
 printf("Enter your answer: ");
-scanf("%d", ans5);
+scanf("%d", &ans5);
 
 //Right + wrong answer - points rewarded for Q4
 if(ans5 == 4){
     printf("That is the CORRECT ANSWER!\n");
     p5 = 5;
-    printf("You have scored %d points!\n", p4);
+    printf("You have scored %d points!\n", p5);
 }
 else{
     printf("That is the WRONG ANSWER!\n");
-    p05 = 0;
-    printf("You have scored %d points!\n", p04);
+    p5 = 0;
+    printf("You have scored %d points!\n", p5);
 }
 
+//end of game message
 
+finalScore = p1 + p2 + p3 + p4 + p5;
+
+printf("How did you do? This was your score: %d / 25\n", finalScore);
+printf("Now lets see what questions you got right and wrong!\n");
+
+// Q1
+if(p1 == 5){
+printf("You got Question 1 CORRECT! The answer is Archie!\n");
+}
+else{
+    printf("You got Question 1 WRONG! The answer is Archie!\n");
+}
+
+// Q2
+if(p2 == 5){
+printf("You got Question 2 CORRECT! The answer is Nexus!\n");
+}
+else{
+    printf("You got Question 2 WRONG! The answer is Nexus!\n");
+}
+
+// Q3
+if(p3 == 5){
+printf("You got Question 3 CORRECT! The answer is Creeper Virus!\n");
+}
+else{
+    printf("You got Question 3 WRONG! The answer is Creeper Virus!\n");
+}
+
+// Q4
+if(p4 == 5){
+printf("You got Question 4 CORRECT! The answer is Security!\n");
+}
+else{
+    printf("You got Question 4 WRONG! The answer is Security!\n");
+}
+
+// Q5
+if(p5 == 5){
+printf("You got Question 5 CORRECT! The answer is Cobal!\n");
+}
+else{
+    printf("You got Question 5 WRONG! The answer is Cobal!\n");
+}
+
+printf("Thanks For Playing!");
 return 0;
 }
 
