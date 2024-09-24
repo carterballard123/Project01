@@ -48,6 +48,7 @@ else{
     printf("You have scored %d points!\n", p1);
 }
 
+//scoreboard updates
 finalScore = p1;
 printf("Your total points are: %d\n", finalScore);
 
@@ -73,6 +74,7 @@ else{
     printf("You have scored %d points!\n", p2);
 }
 
+//scoreboard updates
 finalScore += p2;
 printf("Your total points are: %d\n", finalScore);
 
@@ -98,6 +100,7 @@ else{
     printf("You have scored %d points!\n", p3);
 }
 
+//scoreboard updates
 finalScore += p3;
 printf("Your total points are: %d\n", finalScore);
 
@@ -123,6 +126,7 @@ else{
     printf("You have scored %d points!\n", p4);
 }
 
+//scoreboard updates
 finalScore += p4;
 printf("Your total points are: %d\n", finalScore);
 
